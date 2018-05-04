@@ -100,7 +100,7 @@ while ($artistRow = mysqli_fetch_array($artistsResult)) {
 	$artistName = $artistRow["name"];
 	$selected = "";
 	if ($artistId == $albumArtistId)
-		$selected = " selected=\"selected\""
+		$selected = " selected=\"selected\"";
 ?>
 									<option value="<?=$artistId?>"<?=$selected?>><?=$artistName?></option>
 <?php

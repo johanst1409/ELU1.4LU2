@@ -9,7 +9,7 @@ if ($albumId > 0) {
 	if (mysqli_num_rows($albumResult) < 1) {
 		header("location: /");
 	}
-	
+
 	$album = mysqli_fetch_assoc($albumResult);
 	$albumId = $album["id"];
 	$artistId = $album["artist_id"];
@@ -120,7 +120,7 @@ while ($song = mysqli_fetch_array($songsResult)) {
 						</table>
 					</div>
 					<div class="card-footer">
-						<a href="/song/create.php" class="btn btn-primary">
+						<a href="/song/create.php?album=<?=$albumId?>" class="btn btn-primary">
 							<i class="fa fa-plus"></i>Add Song
 						</a>
 					</div>

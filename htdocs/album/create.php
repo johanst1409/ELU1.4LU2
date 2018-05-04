@@ -41,8 +41,6 @@ if (isset($_POST["submit"])) {
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a class="navbar-brand" href="#">Avans Deeltijd <?=Date('Y')?></a>
-
-
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
@@ -63,7 +61,7 @@ if (isset($_POST["submit"])) {
 				<div class="card">
 					<form method="post" action="/album/create.php" enctype="multipart/form-data">
 						<div class="card-header">
-							<span class="card-title">Add Album</span>
+							<h1 class="card-title">Add Album</h1>
 						</div>
 						<div class="card-body">
 							<div class="form-group">
