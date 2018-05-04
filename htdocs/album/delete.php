@@ -10,6 +10,13 @@ if ($albumId > 0) {
 		header("location: /");
 	}
 
+	$songResult = mysqli_query($mySqlI, "SELECT * FROM songs WHERE album_id = $albumId");
+	while ($song = mysqli_fetch_array($songResult)) {
+		$songId = $song["id"];
+
+		mysqli_query($mySqlI, "DELETE FROM songs WHERE id = $songId");
+	}
+
 	mysqli_query($mySqlI, "DELETE FROM albums WHERE id = $albumId");
 }
 header("location: /");

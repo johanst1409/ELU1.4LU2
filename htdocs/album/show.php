@@ -46,7 +46,7 @@ if ($albumId > 0) {
 					<a class="nav-link" href="/">Albums</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="/artists/">Artists</a>
+					<a class="nav-link" href="/artist/">Artists</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="/songs/">Songs</a>
@@ -59,21 +59,21 @@ if ($albumId > 0) {
 			<div class="col-md-4">
 				<div class="card">
 					<img class="card-img-top" src="<?=$imageUrl?>" alt="<?=$title?>" />
-				</div>
-				<div class="card-body">
-					<h1 class="card-title"><?=$title?></h1>
-    				<h2 class="card-subtitle mb-2 text-muted"><?=$year?></h2>
-					<a href="/artist/show.php?id=<?=$artistId?>">
-						<h3 class="card-text">
-							<?=$artistName?>
-						</h3>
-					</a>
-				</div>
-				<div class="card-footer">
-					<a href="/album/edit.php?id=<?=$albumId?>" class="btn btn-secondary">
-						<i class="fa fa-edit"></i>
-						Edit Album
-					</a>
+					<div class="card-body">
+						<h1 class="card-title"><?=$title?></h1>
+	    				<h2 class="card-subtitle mb-2 text-muted"><?=$year?></h2>
+						<a href="/artist/show.php?id=<?=$artistId?>">
+							<h3 class="card-text">
+								<?=$artistName?>
+							</h3>
+						</a>
+					</div>
+					<div class="card-footer">
+						<a href="/album/edit.php?id=<?=$albumId?>" class="btn btn-secondary">
+							<i class="fa fa-edit"></i>
+							Edit Album
+						</a>
+					</div>
 				</div>
 			</div>
 

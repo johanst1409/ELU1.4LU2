@@ -47,7 +47,7 @@ if (isset($_POST["submit"])) {
 					<a class="nav-link" href="/">Albums</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="/artists/">Artists</a>
+					<a class="nav-link" href="/artist/">Artists</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="/songs/">Songs</a>
