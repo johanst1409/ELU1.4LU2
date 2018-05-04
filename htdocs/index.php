@@ -42,6 +42,9 @@ while ($album = mysqli_fetch_array($albumsResult)) {
 	$artistResult = mysqli_query($mySqlI, "SELECT * FROM artists WHERE id = $artistId LIMIT 1");
 	$artist = mysqli_fetch_assoc($artistResult);
 	$artistName = $artist["name"];
+
+	$albumInformation = $AppHelper->getAlbumInformation($albumId);
+	$albumTime = gmdate("i:s", $albumInformation["time"])
 ?>
 			<div class="col-md-3">
 				<div class="card">
@@ -50,7 +53,16 @@ while ($album = mysqli_fetch_array($albumsResult)) {
 						<span class="card-title"><?=$title?></span>
 	    				<span class="card-subtitle mb-2 text-muted"><?=$year?></span>
 						<p class="card-text">
+							<strong>Artist: </strong>
 							<a href="/artist/show.php?id=<?=$artistId?>"><?=$artistName?></a>
+						</p>
+						<p class="card-text">
+							<strong>Tracks: </strong>
+							<?=$albumInformation["tracks"]?>
+						</p>
+						<p class="card-text">
+							<strong>Time: </strong>
+							<?=$albumTime?>
 						</p>
 					</div>
 					<div class="card-footer">

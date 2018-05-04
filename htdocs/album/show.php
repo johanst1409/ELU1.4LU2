@@ -112,7 +112,14 @@ while ($song = mysqli_fetch_array($songsResult)) {
 								</tr>
 <?php
 }
+$albumInformation = $AppHelper->getAlbumInformation($albumId);
+$albumTime = gmdate("i:s", $albumInformation["time"])
 ?>
+								<tr>
+									<td></td>
+									<td></td>
+									<td><?=$albumTime?></td>
+								</tr>
 							</tbody>
 						</table>
 					</div>

@@ -10,3 +10,6 @@ $dbName = "albums";
 
 // Connectie maken met de database
 $mySqlI = mysqli_connect($dbHost, $dbUser, $dbPassword, $dbName);
+
+include("AppHelper.php");
+$AppHelper = new AppHelper($mySqlI);
