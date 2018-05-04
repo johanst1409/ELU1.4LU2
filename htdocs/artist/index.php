@@ -23,9 +23,6 @@ include("../php/config.php");
 				<li class="nav-item active">
 					<a class="nav-link" href="/artist/">Artists</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/song/">Songs</a>
-				</li>
 			</ul>
 		</div>
 	</nav>
